@@ -71,12 +71,15 @@ pip install timm==0.3.2
 Here we present some results of applying CropMix on three vision tasks, please see our paper for full results. 
 
 ImageNet classification:
+
 <img src='imgs/classification.png' align="middle" width=800>
 
 Contrastive learning:
+
 <img src='imgs/contrastive.png' align="middle" width=800>
 
 Masked image modeling:
+
 <img src='imgs/mim.png' align="middle" width=400>
 
 ## Training and testing
