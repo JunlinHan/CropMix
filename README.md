@@ -82,7 +82,7 @@ Masked image modeling:
 
 <img src='imgs/mim.png' align="left" width=400> <img src='imgs/mim2.png' align="right" width=400>
 
-
+<br>
 ## Training and testing
 Please see each sub-folder for detailed instructions.
 
