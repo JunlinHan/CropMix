@@ -1,0 +1,17 @@
+pretrain
+jig3
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python3 -m torch.distributed.launch --nproc_per_node=8 main_pretrain.py --batch_size 64 --model mae_vit_base_patch16     --accum_iter 8\
+    --norm_pix_loss \
+    --mask_ratio 0.75 \
+    --epochs 200 \
+    --warmup_epochs 10 \
+    --blr 3e-4 --weight_decay 0.05 --pin_mem
+ 
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python3 -m torch.distributed.launch --nproc_per_node=8 main_pretrain.py --batch_size 64 --model mae_vit_base_patch16     --accum_iter 8\
+    --norm_pix_loss \
+    --mask_ratio 0.75 \
+    --epochs 20 \
+    --warmup_epochs 5 \ 
+    --blr 1.5e-4 --weight_decay 0.05 --pin_mem
+
+CUDA_VISIBLE_DEVICES=0,1,2,3 python3 -m torch.distributed.launch --nproc_per_node=4 main_pretrain.py --batch_size 64 --model mae_vit_base_patch16     --accum_iter 16 --norm_pix_loss --mask_ratio 0.75 --epochs 21 --warmup_epochs 5 --blr 1.5e-4 --weight_decay 0.05 --pin_mem 
