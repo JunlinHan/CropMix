@@ -1,6 +1,20 @@
-## Fine-tuning Pre-trained MAE for Classification
+### Fine-tuning Pre-trained MAE for Classification on a single machine
 
+```
+OMP_NUM_THREADS=1 python -m torch.distributed.launch --nproc_per_node=4 main_finetune.py     --accum_iter 16     --batch_size 64     --model vit_base_patch16     --finetune ./output_dir/checkpoint-199.pth     --epochs 100     --warmup_epochs 5     --blr 5e-4 --layer_decay 0.65     --weight_decay 0.05 --drop_path 0.1 --mixup 0.8 --cutmix 1.0 --reprob 0.25     --dist_eval --data_path ${IMAGENET_DIR}
+```
+
+## Pre-trained CropMix + MAE weights 
+
+We provide the [weights of ViT-base pre-trained on ImageNet-1k and 10% ImageNet](https://drive.google.com/drive/folders/1t4U5I0aYYWmpWiEddOo9ae6a3-m6jOIQ?usp=sharing). The mixing operation are CutMix and Mixup, respectively.
+
+checkpoint-199.pth: MAE pre-trained on ImageNet-1k for 200 epochs, with cutmix as mixing operation. 
+checkpoint-299.pth: MAE pre-trained on 10% ImageNet for 300 epochs, with mixup as mixing operation. 
+
+
+## Fine-tuning Pre-trained MAE for Classification
 ### Evaluation
+The rest is identical to the original MAE repo, we didn't try fine-tuning on multiple machines/nodes. 
 
 As a sanity check, run evaluation using our ImageNet **fine-tuned** models:
 

@@ -21,23 +21,6 @@ image containing multi-scale information.
 
 <img src='imgs/cropmix.png' align="middle" width=800>
 
-   
-## Results
-Here we present some results of applying CropMix on three vision tasks, please see our paper for full results. 
-
-ImageNet classification:
-
-<img src='imgs/classification.png' align="middle" width=800>
-
-Contrastive learning:
-
-<img src='imgs/contrastive.png' align="middle" width=800>
-
-Masked image modeling:
-
-<img src='imgs/mim.png' align="middle" width=400>
-
-
 ## Easy usages
 This is a demo of employing CropMix to create your training dataset. 
 ```
@@ -80,12 +63,27 @@ This repo aims to be minimal modifications on [official PyTorch ImageNet trainin
 ```
 pip install timm==0.3.2
 ```
+
 ## CropMix and RRC visualization
 <img src='imgs/visu.png' align="middle" width=800>
 
+## Results
+Here we present some results of applying CropMix on three vision tasks, please see our paper for full results. 
 
-## Training
-Please see each folder for detailed instructions.
+ImageNet classification:
+
+<img src='imgs/classification.png' align="middle" width=800>
+
+Contrastive learning:
+
+<img src='imgs/contrastive.png' align="middle" width=800>
+
+Masked image modeling:
+
+<img src='imgs/mim.png' align="middle" width=400>
+
+## Training and testing
+Please see each sub-folder for detailed instructions.
 
 ## Contact
 junlin.han@data61.csiro.au or junlinhcv@gmail.com

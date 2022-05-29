@@ -4,7 +4,7 @@
   <img src="https://user-images.githubusercontent.com/2420753/161443048-ed1751ed-8a32-4d7d-85b7-024a6dc09067.png" width="300">
 </p>
 
-This repo is for CropMix on contrastive learning, we only slightly modify the [Asym-Siam repo](https://github.com/facebookresearch/asym-siam).
+This repo is the code of CropMix on contrastive learning, we only slightly modify the [Asym-Siam repo](https://github.com/facebookresearch/asym-siam).
 
 ## Installation
 
@@ -47,6 +47,8 @@ python main_lincls.py \
   --pretrained [your checkpoint path] \
   [your imagenet-folder with train and val folders]
 ```
+
+Our pre-trained models can be find at: https://drive.google.com/drive/folders/1x46eDfITqjUgnoogbkoqCepZtuNp60BM?usp=sharing
 
 ### License
 

@@ -1,5 +1,5 @@
 ## Training
-We provide our training code for image classification tasks (ImageNet recipe 1, CIFAR-10, and CIFAR-100). 
+Code for image classification tasks (ImageNet recipe 1, CIFAR-10, and CIFAR-100). 
 
 
 ### CropMix configurations
@@ -46,6 +46,6 @@ For ImageNet-S, see [ImageNet-Sketch](https://github.com/HaohanWang/ImageNet-Ske
 
 ## Pre-trained models
 
-We provide our pre-trained CropMix ImageNet classification models at: https://drive.google.com/drive/folders/1CmZW6UoR-YESqQ00IMPE9fVDfYjBa5IZ?usp=sharing
+We provide our pre-trained CropMix ImageNet classification models (resnet-50, recipe 1) at: https://drive.google.com/drive/folders/1qhZqD6Xu2oIfw8PXIEpNpywiJNS6fpWO?usp=sharing
 
 
