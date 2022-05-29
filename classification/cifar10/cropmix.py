@@ -1,8 +1,7 @@
-# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
+# Implementation of CropMix: Sampling a Rich Input Distribution via Multi-Scale Cropping
 import random
 import numpy as np
 import torchvision.transforms as transforms
-import torch
 
 def mixup(view1, view2, lam, inter_aug):
     if inter_aug:
@@ -15,12 +14,7 @@ def mixup(view1, view2, lam, inter_aug):
             view1 = lam * view1[permute] + (1 - lam) * view2
             return view1
     else:
-        if lam > 0.5:
-            view1 = lam * view1 + (1 - lam) * view2
-            return view1
-        else:
-            view1 = lam * view1 + (1 - lam) * view2
-            return view1
+        return lam * view1 + (1 - lam) * view2
 
 def cutmix(view1, view2, inter_aug):
     lam = np.random.uniform(low=0.0, high=1.0)

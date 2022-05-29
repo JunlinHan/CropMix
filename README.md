@@ -80,7 +80,7 @@ Contrastive learning:
 
 Masked image modeling:
 
-<img src='imgs/mim.png' align="middle" width=400> <img src='imgs/mim2.png' align="middle" width=400>
+<img src='imgs/mim.png' align="middle" width=400 height= 220> <img src='imgs/mim2.png' align="middle" width=400 height= 220>
 
 ## Training and testing
 Please see each sub-folder for detailed instructions.
