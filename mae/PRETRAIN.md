@@ -7,11 +7,11 @@ operation: mixing operation, 0 for mixup, 1 for cutmix
 inter_aug: apply intermediate augmentation (channel permutation)
 ```
 
-For operation, MixUp is good for small-scale dataset (10% ImageNet) while CutMix performs much better in ImageNet-1k. See our paper and appendix for detailed results. 
+For mixing operation, MixUp is good for small-scale dataset (10% ImageNet) while CutMix performs much better in ImageNet-1k. See our paper and appendix for detailed results. 
 
 ## Pre-training MAE on a single machine
 
-To reproduce our experiments on ImageNet-1k (4 GPU training):
+To reproduce our experiments on ImageNet-1k (4 GPUs for training):
 
 Use Mixup as mixing operation:
 ```
@@ -23,7 +23,7 @@ python3 -m torch.distributed.launch --nproc_per_node=4 main_pretrain.py --batch_
 ```
 
 ## Pre-training MAE with multiple machines
-We didn't try this, commands here are identical to the original MAE repo.  You might add CropMix configurations (--scale 0.2 --number 2 --operation 1) to test the performance. 
+We didn't try this, commands here are identical to the original MAE repo. You might add CropMix configurations (--scale 0.2 --number 2 --operation 1) to test the performance. 
 
 To pre-train ViT-Large (recommended default) with **multi-node distributed training**, run the following on 8 nodes with 8 GPUs each:
 ```
