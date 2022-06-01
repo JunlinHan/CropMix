@@ -29,6 +29,7 @@ python3 -m torch.distributed.launch --nproc_per_node=4 main_pretrain.py --batch_
 We provide the [weights of ViT-base pre-trained on ImageNet-1k and 10% ImageNet](https://drive.google.com/drive/folders/1t4U5I0aYYWmpWiEddOo9ae6a3-m6jOIQ?usp=sharing). The mixing operation are CutMix and Mixup, respectively.
 
 checkpoint-199.pth: MAE pre-trained on ImageNet-1k for 200 epochs, with cutmix as mixing operation. 
+
 checkpoint-299.pth: MAE pre-trained on 10% ImageNet for 300 epochs, with mixup as mixing operation. 
 
 
