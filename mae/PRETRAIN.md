@@ -7,7 +7,7 @@ operation: mixing operation, 0 for mixup, 1 for cutmix
 inter_aug: apply intermediate augmentation (channel permutation)
 ```
 
-For mixing operation, MixUp is good for small-scale dataset (10% ImageNet) while CutMix performs much better in ImageNet-1k. 
+For mixing operation, Mixup is good for small-scale dataset (10% ImageNet) while CutMix performs much better in ImageNet-1k. 
 
 <img src='result.png' align="middle" width=400>
 
