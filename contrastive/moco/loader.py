@@ -3,6 +3,7 @@ from PIL import ImageFilter
 import random
 import numpy as np
 
+
 def cropmix(view1, view2):
     def random_bbox(lam, H, W):
         cut_rat = np.sqrt(1.0 - lam)
@@ -43,7 +44,7 @@ class CropsTransform:
         crops = []
         # Query crop
         if self.enable_cropmix:
-            q = cropmix(self.query_transform_small(x), self.query_transform_large(x),)
+            q = cropmix(self.query_transform_small(x), self.query_transform_large(x), )
         else:
             q = self.query_transform(x)
         crops.append(q)
