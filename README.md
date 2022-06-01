@@ -2,7 +2,7 @@
 
 CropMix is a method for sampling input distribution. CropMix captures multi-scale information from the dataset distribution to form a richer input distribution for vision tasks. Compared to RRC (Random Resized Crop), CropMix shows positive results in image classification, contrastive learning, and masked image modeling. 
 
-[CropMix: Sampling a Rich Input Distribution via Multi-Scale Cropping](https://arxiv.org/abs/2201.12078) <br>
+[CropMix: Sampling a Rich Input Distribution via Multi-Scale Cropping](https://arxiv.org/abs/2205.15955) <br>
 [Junlin Han](https://junlinhan.github.io/), [Lars Petersson](https://people.csiro.au/P/L/Lars-Petersson), [Hongdong Li](http://users.cecs.anu.edu.au/~hongdong/), [Ian Reid](https://cs.adelaide.edu.au/~ianr/) <br>
 DATA61-CSIRO and Australian National University and University of Adelaide <br>
 Preprint, 2022
@@ -11,7 +11,7 @@ Preprint, 2022
 @inproceedings{han2022cropmix,
   title={CropMix: Sampling a Rich Input Distribution via Multi-Scale Cropping},
   author={Junlin Han and Lars Petersson and Hongdong Li and Ian Reid},
-  booktitle={},
+  booktitle={arXiv preprint arXiv:2205.15955},
   year={2022}
 }
 ```
