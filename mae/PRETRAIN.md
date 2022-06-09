@@ -17,11 +17,11 @@ To reproduce our experiments on ImageNet-1k (4 GPUs for training):
 
 Use Mixup as mixing operation:
 ```
-python3 -m torch.distributed.launch --nproc_per_node=4 main_pretrain.py --batch_size 64 --model mae_vit_base_patch16  --accum_iter 16 --norm_pix_loss --mask_ratio 0.75 --epochs 200 --warmup_epochs 20 --blr 1.5e-4 --weight_decay 0.05 --pin_mem --scale 0.2 --mix_ratio 0.4 --number 234 --operation 0
+python3 -m torch.distributed.launch --nproc_per_node=4 main_pretrain.py --batch_size 64 --model mae_vit_base_patch16  --accum_iter 16 --norm_pix_loss --mask_ratio 0.75 --epochs 200 --warmup_epochs 20 --blr 1.5e-4 --weight_decay 0.05 --pin_mem --scale 0.2 --mix_ratio 0.4 --number 234 --operation 0 --data_path ${IMAGENET_DIR}
 ```
 or CutMix:
 ```
-python3 -m torch.distributed.launch --nproc_per_node=4 main_pretrain.py --batch_size 64 --model mae_vit_base_patch16  --accum_iter 16 --norm_pix_loss --mask_ratio 0.75 --epochs 200 --warmup_epochs 20 --blr 1.5e-4 --weight_decay 0.05 --pin_mem --scale 0.2 --number 2 --operation 1
+python3 -m torch.distributed.launch --nproc_per_node=4 main_pretrain.py --batch_size 64 --model mae_vit_base_patch16  --accum_iter 16 --norm_pix_loss --mask_ratio 0.75 --epochs 200 --warmup_epochs 20 --blr 1.5e-4 --weight_decay 0.05 --pin_mem --scale 0.2 --number 2 --operation 1 --data_path ${IMAGENET_DIR}
 ```
 
 ## Pre-trained CropMix + MAE weights 
