@@ -16,7 +16,7 @@ This repo is the code of CropMix on contrastive learning, we only slightly modif
 
 4. Clone the repository: 
 ```
-git clone https://github.com/facebookresearch/asym-siam & cd asym-siam
+git clone https://github.com/JunlinHan/CropMix & cd CropMix/contrastive
 ```
 
 
