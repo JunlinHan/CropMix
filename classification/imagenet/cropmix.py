@@ -75,11 +75,11 @@ class CropMix:
 
         if self.number == 2:
             t1 = transforms.Compose([
-                transforms.RandomResizedCrop(224, scale=(self.scale, (1 - self.scale) / self.number)),
+                transforms.RandomResizedCrop(224, scale=(self.scale, self.scale + (1 - self.scale) / self.number)),
                 transforms.ToTensor(),
             ])
             t2 = transforms.Compose([
-                transforms.RandomResizedCrop(224, scale=(((1 - self.scale) / self.number), 1)),
+                transforms.RandomResizedCrop(224, scale=(self.scale + (1 - self.scale) / self.number, 1)),
                 transforms.ToTensor(),
             ])
             view1 = t1(x)
