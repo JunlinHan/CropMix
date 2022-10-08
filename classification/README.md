@@ -14,8 +14,7 @@ inter_aug: apply intermediate augmentation (channel permutation)
 ### ImageNet
 ```
 cd imagenet
-python -W ignore main.py --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 --scale 0.01 --mix_ratio 0.4 --number 234 --operation 0 --inter_aug\
-[your imagenet-folder with train and val folders]
+python -W ignore main.py --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 --scale 0.01 --mix_ratio 0.4 --number 234 --operation 0 --inter_aug [your imagenet-folder with train and val folders]
 ```
 
 ### CIFAR-100
